@@ -72,7 +72,7 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
               <CurrencyDollarIcon className="pointer-events-none absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-gray-500 peer-focus:text-gray-900" />
             </div>
           </div>
-          <div id="customer-error" aria-live="polite" aria-atomic="true">
+          <div id="amount-error" aria-live="polite" aria-atomic="true">
             {state.errors?.amount &&
               state.errors.amount.map((error: string) => (
                 <p className="mt-2 text-sm text-red-500" key={error}>
@@ -121,7 +121,7 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
               </div>
             </div>
           </div>
-          <div id="pending-error" aria-live="polite" aria-atomic="true">
+          <div id="status-error" aria-live="polite" aria-atomic="true">
             {state.errors?.status &&
               state.errors.status.map((error: string) => (
                 <p className="mt-2 text-sm text-red-500" key={error}>
@@ -129,7 +129,7 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
                 </p>
               ))}
           </div>
-          <div id="pending-error" aria-live="polite" aria-atomic="true">
+          <div id="message-error" aria-live="polite" aria-atomic="true">
            {state.message && (
             <div className="mt-4 rounded-md bg-red-100 p-2 text-sm text-red-700">
               {state.message}

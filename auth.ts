@@ -35,6 +35,7 @@ export const { auth, signIn, signOut } = NextAuth({
           if (passwordsMatch) return user;
         }
  
+        return null;
       },
     }),],
 });
